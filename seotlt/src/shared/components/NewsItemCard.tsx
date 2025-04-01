@@ -38,11 +38,16 @@ const NewsItemCard: React.FC<Props> = ({ item, onDelete, onSave }) => {
             value={content}
             onChange={e => setContent(e.target.value)}
           />
-          <div className="flex justify-end gap-2">
-            <button onClick={handleSave} className="text-green-600 text-sm">
+          <div className="flex justify-end gap-2 c">
+            <button
+              onClick={handleSave}
+              className="text-green-600 text-sm active:text-gray-300
+              hover:opacity-70">
               💾 Сохранить
             </button>
-            <button onClick={handleCancel} className="text-gray-500 text-sm">
+            <button
+              onClick={handleCancel}
+              className="text-gray-500 text-sm active:text-gray-300 hover:opacity-70">
               ❌ Отмена
             </button>
           </div>
@@ -52,10 +57,16 @@ const NewsItemCard: React.FC<Props> = ({ item, onDelete, onSave }) => {
           <div className="font-semibold">{item.title}</div>
           <div className="text-sm text-gray-700 mb-2">{item.content}</div>
           <div className="flex justify-end gap-2">
-            <button onClick={() => setEditing(true)} className="text-blue-600 text-sm">
+            <button
+              onClick={() => setEditing(true)}
+              className="text-blue-600 text-sm active:text-gray-300
+              hover:opacity-70">
               ✏️ Редактировать
             </button>
-            <button onClick={() => onDelete(item.id)} className="text-red-600 text-sm">
+            <button
+              onClick={() => onDelete(item.id)}
+              className="text-red-600 text-sm active:text-gray-300
+              hover:opacity-70">
               🗑️ Удалить
             </button>
           </div>
