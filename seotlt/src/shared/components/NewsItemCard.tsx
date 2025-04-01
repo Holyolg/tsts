@@ -25,7 +25,7 @@ const NewsItemCard: React.FC<Props> = ({ item, onDelete, onSave }) => {
   };
 
   return (
-    <div className="border p-3 rounded shadow-sm">
+    <div className="border border-gray-300 p-3 rounded-xl shadow-sm">
       {editing ? (
         <>
           <input
