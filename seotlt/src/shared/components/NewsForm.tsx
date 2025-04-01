@@ -40,12 +40,15 @@ const NewsForm: React.FC<Props> = ({ form, onChange, onSubmit }) => {
       <textarea
         name="content"
         ref={contentRef}
-        className="w-full border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
+        className="w-full border border-solid
+        border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
         placeholder="Содержание"
         value={form.content}
         onChange={handleInput}
       />
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-xl w-full">
+      <button
+        type="submit"
+        className="bg-blue-600 text-white px-4 py-2 rounded-xl w-full hover:opacity-80 active:bg-blue-700 cursor-pointer ">
         Добавить новость
       </button>
     </form>

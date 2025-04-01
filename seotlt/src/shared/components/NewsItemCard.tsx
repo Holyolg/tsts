@@ -25,11 +25,11 @@ const NewsItemCard: React.FC<Props> = ({ item, onDelete, onSave }) => {
   };
 
   return (
-    <div className="border border-gray-300 p-3 rounded-xl shadow-sm">
+    <div className="border border-solid border-gray-300 p-3 rounded-xl shadow-sm">
       {editing ? (
         <>
           <input
-            className="w-full border border-gray-400 bg-white text-black p-2 rounded shadow-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-300"
+            className="w-full border border-gray-300 p-1 mb-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
             value={title}
             onChange={e => setTitle(e.target.value)}
           />
@@ -60,13 +60,13 @@ const NewsItemCard: React.FC<Props> = ({ item, onDelete, onSave }) => {
             <button
               onClick={() => setEditing(true)}
               className="text-blue-600 text-sm active:text-gray-300
-              hover:opacity-70">
+              hover:opacity-70 cursor-pointer">
               ✏️ Редактировать
             </button>
             <button
               onClick={() => onDelete(item.id)}
               className="text-red-600 text-sm active:text-gray-300
-              hover:opacity-70">
+              hover:opacity-70 cursor-pointer">
               🗑️ Удалить
             </button>
           </div>
