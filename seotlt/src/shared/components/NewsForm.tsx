@@ -31,7 +31,7 @@ const NewsForm: React.FC<Props> = ({ form, onChange, onSubmit }) => {
     <form onSubmit={handleSubmit} className="space-y-2 mb-6">
       <input
         name="title"
-        className="w-full border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
+        className="w-full border border-solid border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
         placeholder="Заголовок"
         value={form.title}
         onChange={handleInput}

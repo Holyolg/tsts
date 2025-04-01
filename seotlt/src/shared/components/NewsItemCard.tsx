@@ -29,12 +29,12 @@ const NewsItemCard: React.FC<Props> = ({ item, onDelete, onSave }) => {
       {editing ? (
         <>
           <input
-            className="w-full border border-gray-300 p-1 mb-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
+            className="w-full border border-solid border-gray-300 p-1 mb-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
             value={title}
             onChange={e => setTitle(e.target.value)}
           />
           <textarea
-            className="w-full border border-gray-300 p-1 mb-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
+            className="w-full border border-solid border-gray-300 p-1 mb-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-300 rounded-xl p-2 outline-none"
             value={content}
             onChange={e => setContent(e.target.value)}
           />
